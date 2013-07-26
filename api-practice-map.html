@@ -1,0 +1,51 @@
+// insert API key before running
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+  #silly{
+		border:2px solid black;
+	}
+	#googleMap{
+		border:10px dotted blue;
+	}
+
+</style>
+
+<script>
+function initialize(){	
+	var mapProp = {
+	  center:new google.maps.LatLng(38.1575, -78.482778),
+	  zoom:8,
+	  mapTypeId:google.maps.MapTypeId.TERRAIN
+	};
+	
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+}
+
+function loadScript(){
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key="+ KEY ;
+  document.body.appendChild(script);
+}
+window.onload = loadScript;
+
+</script>
+
+</script>
+</head>
+
+<body>
+
+	<div id="silly" style="width:200px"> here is a map.</div>
+</br> </br>
+	<div id="googleMap" style="width:400px;height:380px;",>
+	</div>
+<br>
+
+</body>
+</html>
